@@ -47,6 +47,10 @@ function leftArrow() {
    }
 }
 
+function previewFive(){
+  
+}
+
 /* open center figure in separate window */
 function zoomFig() {
    alert("center image clicked");
@@ -75,6 +79,13 @@ if (mainfig.addEventListener) {
    mainfig.addEventListener("click",zoomFig,false);
 }else if(mainfig.attachEvent){
    mainfig.addEventListener("click",zoomFig);
+}
+
+var showAllButton = document.querySelector("#fiveButton p");
+if(showAllButton.addEventListener){
+   showAllButton.addEventListener("click", previewFive, false);
+}else if(showAllButton.attachEvent){
+   showAllButton.attachEvent("onclick", previewFive);
 }
 }
 
